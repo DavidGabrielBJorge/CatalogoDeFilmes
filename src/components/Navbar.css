@@ -41,5 +41,18 @@
     color: aqua;
 }
 
+@media (max-width: 1300px){
+    
+    #navbar h2 a{
+        font-size: 1.1rem;
+    }
+
+    #navbar input{
+        padding: 0.1rem 0.6rem;
+
+    }
+    
+}
+
 
 

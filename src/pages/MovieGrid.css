@@ -60,5 +60,28 @@
 }
 
 .movies-container div:last-child{
-    display: none;
+    margin-right: 35%;
+}
+
+@media (max-width: 1300px){
+
+    .container .title{
+        font-size: 2rem;
+    }
+    .movies-container div {
+        width: 40%;
+    }
+
+    .movies-container div h2{
+        font-size: 1rem;
+    }
+    .movies-container div:last-child{
+        margin-right: 0;
+    }
+
+    .movies-container div a{
+        padding: 0.5rem 0.5rem;
+        font-size: 0.8rem;
+
+    }
 }

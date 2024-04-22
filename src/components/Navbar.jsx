@@ -7,12 +7,21 @@ const Navbar = () => {
   const [search, setSearch] = useState("");
   const navigate = useNavigate();
 
+  const handleSubmit = (e) =>{
+    e.preventDefault();
+    if(!search){
+      return
+    }
+    navigate(`/search?q=${search}`)
+    setSearch("") 
+  }
+
   return (
     <nav id="navbar">
     <h2>
       <Link to="/"> <BiCameraMovie/> Movies Lib</Link>
     </h2>
-    <form>
+    <form onSubmit={handleSubmit}>
         <input type="text" placeholder="Search a movie..." onChange={(e) => setSearch(e.target.value)} value={search}/>
         <button type="submit"> <BiSearchAlt2/></button>
     </form>
